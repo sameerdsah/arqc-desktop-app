@@ -33,15 +33,15 @@ function createWindow() {
   Menu.setApplicationMenu(null); // removes File/Edit/View/Window bar, like Calculator
 
   mainWindow = new BrowserWindow({
-    width: 480,
-    height: 720,
-    minWidth: 400,
-    minHeight: 600,
-    title: 'ARQC Generator',
-    icon: path.join(__dirname, 'assets', 'OPUS_logo.ico'),
-    autoHideMenuBar: true,
-    webPreferences: { contextIsolation: true }
-  });
+  width: 480,
+  height: 670,  
+  minWidth: 400,
+  minHeight: 600,
+  title: 'Cryptogram Generator',
+  icon: path.join(__dirname, 'assets', 'OPUS_logo.ico'),
+  autoHideMenuBar: true,
+  webPreferences: { contextIsolation: true }
+});
 
   waitForServer('http://127.0.0.1:5000', () => {
     mainWindow.loadURL('http://127.0.0.1:5000');
