@@ -4,6 +4,7 @@ pipeline {
         AWS_ACCESS_KEY_ID = credentials('aws-access-key-id')
         AWS_SECRET_ACCESS_KEY = credentials('aws-secret-access-key')
         AWS_DEFAULT_REGION = 'eu-north-1'
+        ELECTRON_BUILDER_CACHE = 'D:\\projects\\electron-builder-cache'
     }
     stages {
         stage('Install Dependencies') {
